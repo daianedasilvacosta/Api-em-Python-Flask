@@ -1,0 +1,24 @@
+Api Python Flask para ativar
+começe copiando o scrpit que está na pasta no banco de dados MySQL 
+
+depois instale na IDE Visual Studio Code
+se for usar o  Ubuntu-WSL
+
+sudo apt-get install libmysqlclient-dev
+pip3 install mysqlclient
+pip3 install flask_mysqldb==0.2.0
+pip3 install flask==0.12.2
+
+se for usar o Prompt do Windows 
+
+pip3 install flask==0.12.2
+pip3 install mysqlclient
+pip3 install flask_mysqldb==0.2.0
+
+obs: falta arrumar a rota atualizar que está em artigo.py
+ falta arrumar a rota editar que está em requerimento.py
+
+criar uma ec2 na aws
+Uni as quatro api e os bancos 
+aplicar o gRPC automotizar no Terraform enviando direto para aws
+criar o BDD e fazer a documentação no swagger

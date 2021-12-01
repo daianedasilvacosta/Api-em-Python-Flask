@@ -1,0 +1,28 @@
+{% extends "template.html" %}
+{% block conteudo %}
+    <a class="btn btn-primary" href="{{ url_for('novo') }}">Novo Produto</a>
+
+        <table class="table table-striped table-responsive table-bordered">
+            <thead class="thead-default">
+                <tr>
+                    <th>Nome Produto</th>
+                    <th>Descrição Produto</th>
+                    <th>Preço Produto</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for produto in produtos %}
+                <tr>
+                    <td>{{ produto.nomeproduto }}</td>
+                    <td>{{ produto.descricaoproduto }}</td>
+                    <td>{{ produto.precoproduto }}</td>
+                    <td>
+                        <a href="{{ url_for('editar', id=produto.id) }}">Editar</a>
+                        <a href="{{ url_for('deletar', id=produto.id) }}">Deletar</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+{% endblock %}
